@@ -18,6 +18,8 @@ function verificaSeOChutePossuiUmValorValido(chute) {
 
         <button id="jogar-novamente" class="btn-jogar">Jogar Novamente</button>
         `
+        fireConfetti()
+
     } else if (numero > numeroSecreto) {
         elementoChute.innerHTML += `
         <div>O número secreto é menor <i class="fa-solid fa-arrow-down"></i></div>
@@ -42,3 +44,22 @@ document.body.addEventListener('click', e => {
         window.location.reload()
     }
 })
+
+function fireConfetti() {
+    let params = {
+		particleCount: 400, // Quantidade de confetes
+		spread: 90, // O quanto eles se espalham
+		startVelocity: 60, // Velocidade inicial
+		origin: { x: 0, y: 0.5 }, // Posição inicial na tela
+		angle: 45 // Ângulo em que os confetes serão lançados
+	};
+
+	// Joga confetes da esquerda pra direita
+	confetti(params);
+
+	// Joga confetes da direita para a esquerda
+	params.origin.x = 1;
+	params.angle = 135;
+	confetti(params);
+
+}
