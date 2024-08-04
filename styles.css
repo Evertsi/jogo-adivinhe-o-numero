@@ -21,6 +21,9 @@ body {
 h1 {
     font-size: 5em;
 }
+h2 {
+    font-size: 4em;
+}
 h3 {
     font-size: 2em;
     margin-top: 20px;
@@ -35,4 +38,30 @@ h3 {
     font-size: 4em;
     padding: 10px;
     margin: 20px;
+}
+.btn-jogar {
+    padding: 8px 15px;
+    border: 0;
+    background: var(--primary-color);
+    border-radius: 5px;
+    margin-top: 20px;
+    font-family: var(--font-family);
+    color: var(--bg-color);
+    font-weight: 700;
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 2.5em;
+    }
+    h3 {
+        font-size: 1.5em;
+        margin: 1em;
+    }
+    .box {
+        font-size: 2em;
+    }
 }
